@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="add_task.css" />
+    <link rel="stylesheet" href="../navbar/navbar.css">
+    <link
+      rel="shortcut icon"
+      href="./favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../toast.css" />
+    <title>New Task</title>
+  </head>
+  <body>
+    <!-- navbar  -->
+    <nav class="navbar">
+      <div class="containerNav">
+        <a href="../index.html" class="logo">Task Management System</a>
+        <button class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="../user_register/register.html">Register</a>
+          <a href="../user_login/login.html">Login</a>
+          <a href="#logout" id="logout">Logout</a>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- body  -->
+    <div class="header">
+      <h1>Add New Task</h1>
+    </div>
+    <form class="task-form" id="addTaskForm">
+      <label for="title">Title</label>
+      <input type="text" placeholder="Title" name="title" id="title" required />
+      <label for="description">Description</label>
+      <textarea
+        placeholder="Description"
+        name="description"
+        id="description"
+        rows="3"
+        style="resize: none"
+        required
+      ></textarea>
+      <label for="assignee">Assignee</label>
+      <input
+        type="text"
+        placeholder="Assignee"
+        name="assignee"
+        id="assignee"
+        required
+      />
+      <label for="createDate">Create Date</label>
+      <input
+        type="date"
+        placeholder="Create Date"
+        name="createDate"
+        id="createDate"
+        required
+      />
+      <label for="dueDate">Due Date</label>
+      <input
+        type="date"
+        placeholder="Due Date"
+        name="dueDate"
+        id="dueDate"
+        required
+      />
+      <label for="priority">Priority</label>
+      <select name="priority" id="priority" required>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+      <label for="status">Status</label>
+      <select name="status" id="status" required>
+        <option value="To Do">To Do</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
+      <button type="submit" class="btn">Add Task</button>
+      <a href="../index.html" class="cancel-button">Cancel</a>
+    </form>
+
+     <!-- toast  -->
+     <ul class="notifications"></ul>
+
+    <script src="add_task.js"></script>
+    <script src="../toast.js"></script>
+  </body>
+</html>

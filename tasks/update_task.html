@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="update_task.css" />
+
+    <link rel="stylesheet" href="../navbar/navbar.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../toast.css" />
+    <link
+      rel="shortcut icon"
+      href="./favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Update Task</title>
+  </head>
+  <body>
+
+    <!-- navbar  -->
+    <nav class="navbar">
+      <div class="containerNav">
+        <a href="../index.html" class="logo">Task Management System</a>
+        <button class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="../user_register/register.html">Register</a>
+          <a href="../user_login/login.html">Login</a>
+          <a href="#logout" id="logout">Logout</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- body  -->
+    <div class="container">
+      <h2>Update Task</h2>
+      <form id="updateTaskForm" style="margin-top: 20px;">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" required />
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <label for="assignee">Assignee</label>
+        <input type="text" id="assignee" name="assignee" required />
+
+        <label for="createDate">Create Date</label>
+        <input type="date" id="createDate" name="createDate" required />
+
+        <label for="dueDate">Due Date</label>
+        <input type="date" id="dueDate" name="dueDate" required />
+
+        <label for="priority">Priority</label>
+        <select id="priority" name="priority">
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+
+        <label for="status">Status</label>
+        <select id="status" name="status">
+          <option value="To Do">To Do</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+
+        <button type="submit" class="btn">Update Task</button>
+        <div class="cancel-button">
+          <a href="../index.html">Cancel</a>
+        </div>
+      </form>
+    </div>
+
+     <!-- toast  -->
+     <ul class="notifications"></ul>
+
+    <script src="update_task.js"></script>
+    <script src="../toast.js"></script>
+  </body>
+</html>

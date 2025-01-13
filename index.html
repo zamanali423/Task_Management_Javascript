@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./navbar/navbar.css" />
+    <link rel="stylesheet" href="./toast.css" />
+    <link
+      rel="shortcut icon"
+      href="./favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Task Management System</title>
+  </head>
+  <body>
+    <!-- navbar  -->
+    <nav class="navbar">
+      <div class="containerNav">
+        <a href="./index.html" class="logo">Task Management System</a>
+        <button class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="../user_register/register.html">Register</a>
+          <a href="../user_login/login.html">Login</a>
+          <a href="#logout" id="logout">Logout</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- body  -->
+    <div class="container">
+      <div class="header">
+        <h1>Task Management System</h1>
+      </div>
+
+      <div style="margin: 15px 0">
+        <a href="./tasks/add_task.html" class="add-task-button">Add Task</a>
+        <button class="add-task-button btn" id="undo-button">Undo</button>
+        <button class="add-task-button btn" id="redo-button">Redo</button>
+      </div>
+      <form class="search-form">
+        <input type="text" placeholder="Search tasks..." name="query" />
+        <button type="submit">Search</button>
+      </form>
+
+      <table class="task-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Assignee</th>
+            <th>Create Date</th>
+            <th>Due Date</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Data will be displayed dynamically using JavaScript -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- toast  -->
+    <ul class="notifications"></ul>
+    
+    <!-- main file -->
+    <script src="script.js"></script>
+    <!-- navbar  -->
+    <script src="./navbar/navbar.js"></script>
+    <!-- toast  -->
+    <script src="./toast.js"></script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #78fad1;
+    color: #333;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #4CAF50;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.header h1 {
+    font-size: 2rem;
+}
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: auto;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select,
+.task-form button, .cancel-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.task-form input:focus,
+.task-form textarea:focus,
+.task-form select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    outline: none;
+}
+
+.task-form button, .cancel-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.task-form button:hover, .cancel-button:hover {
+    background-color: #388E3C;
+}
+
+.task-form textarea {
+    resize: none;
+}
+
+.task-form select {
+    appearance: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.task-form select option {
+    font-size: 1rem;
+}
+
+.cancel-button {
+    text-decoration: none;
+    text-align: center;
+}
+
+label{
+    font-weight: bold;
+}

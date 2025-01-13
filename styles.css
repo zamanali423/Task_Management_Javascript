@@ -1,0 +1,143 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #78fad1;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main Content Container */
+.container {
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+/* Header section */
+.header {
+  background-color: #4caf50;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.header h1 {
+  font-size: 2rem;
+}
+
+/* Task table */
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.task-table th,
+.task-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.task-table th {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Search Form */
+.search-form {
+  margin: 15px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.search-form button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: #388e3c;
+}
+
+/* Add Task Button */
+.add-task-button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.add-task-button:hover {
+  background-color: #388e3c;
+}
+
+.fa-solid {
+  cursor: pointer;
+}
+
+/* Responsive table for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .task-table {
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+  }
+
+  .task-table th,
+  .task-table td {
+    display: inline-block;
+    width: 16%;
+  }
+}
+
+@media (max-width: 310px) {
+  .search-form {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .search-form input {
+    padding: 8px;
+  }
+
+  .search-form button {
+    padding: 8px;
+    font-size: 0.875rem;
+  }
+  .header h1 {
+    font-size: 1rem;
+}
+}
